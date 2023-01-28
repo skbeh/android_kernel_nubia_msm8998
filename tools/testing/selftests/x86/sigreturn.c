@@ -593,7 +593,7 @@ static int test_bad_iret(int cs_bits, unsigned short ss, int force_cs)
 	}
 }
 
-int main()
+int main(void)
 {
 	int total_nerrs = 0;
 	unsigned short my_cs, my_ss;

@@ -305,7 +305,7 @@ static inline void restore_complete(void)
  *	   time in order to properly restore the
  *	   SPU_Status register.
  */
-int main()
+int main(void)
 {
 	addr64 lscsa_ea;
 

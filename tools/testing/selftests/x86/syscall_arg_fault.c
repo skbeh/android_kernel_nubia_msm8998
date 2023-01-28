@@ -64,7 +64,7 @@ static void sigill(int sig, siginfo_t *info, void *ctx_void)
 	siglongjmp(jmpbuf, 1);
 }
 
-int main()
+int main(void)
 {
 	stack_t stack = {
 		.ss_sp = altstack_data,

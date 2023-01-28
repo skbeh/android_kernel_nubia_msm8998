@@ -53,7 +53,7 @@ asm (".pushsection .text\n\t"
 extern void test_ss(void);
 #endif
 
-int main()
+int main(void)
 {
 	/*
 	 * Start a busy-looping thread on the same CPU we're on.

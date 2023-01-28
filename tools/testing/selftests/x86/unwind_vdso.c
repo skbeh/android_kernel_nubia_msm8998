@@ -21,7 +21,7 @@
 
 #if defined(__GLIBC__) && __GLIBC__ == 2 && __GLIBC_MINOR__ < 16
 
-int main()
+int main(void)
 {
 	/* We need getauxval(). */
 	printf("[SKIP]\tGLIBC before 2.16 cannot compile this test\n");
@@ -164,7 +164,7 @@ static void sigtrap(int sig, siginfo_t *info, void *ctx_void)
 	_Unwind_Backtrace(trace_fn, &state);
 }
 
-int main()
+int main(void)
 {
 	sysinfo = getauxval(AT_SYSINFO);
 	printf("\tAT_SYSINFO is 0x%lx\n", sysinfo);
