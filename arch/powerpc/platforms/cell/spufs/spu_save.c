@@ -165,7 +165,7 @@ static inline void save_complete(void)
  *         signal notification channels.
  *      2. All 128 registers are saved by crt0.o.
  */
-int main()
+int main(void)
 {
 	addr64 lscsa_ea;
 

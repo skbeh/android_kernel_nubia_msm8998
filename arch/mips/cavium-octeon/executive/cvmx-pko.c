@@ -551,7 +551,7 @@ cvmx_pko_status_t cvmx_pko_config_port(uint64_t port, uint64_t base_queue,
 /**
  * Show map of ports -> queues for different cores.
  */
-void cvmx_pko_show_queue_map()
+void cvmx_pko_show_queue_map(void)
 {
 	int core, port;
 	int pko_output_ports = 36;

@@ -241,7 +241,7 @@ static void kputs(const char *s)
  * Fill the input buffer. This is called only when the buffer is empty
  * and at least one byte is really needed.
  */
-static int fill_inbuf()
+static int fill_inbuf(void)
 {
 	if (insize != 0)
 		error("ran out of input data\n");

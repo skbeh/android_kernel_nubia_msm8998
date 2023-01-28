@@ -78,7 +78,7 @@ void m360_cpm_reset(void);
 
 
 
-void __init m360_cpm_reset()
+void __init m360_cpm_reset(void)
 {
 /* 	pte_t		   *pte; */
 

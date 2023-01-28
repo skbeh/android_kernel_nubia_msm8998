@@ -115,7 +115,7 @@ static void check_result(void)
 	sig_traps = 0;
 }
 
-int main()
+int main(void)
 {
 	int tmp;
 

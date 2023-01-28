@@ -120,7 +120,7 @@ FILE *prepare_output(const char *dirname)
  * @retval NULL when the output file can't be created
  **/
 
-struct config *prepare_default_config()
+struct config *prepare_default_config(void)
 {
 	struct config *config = malloc(sizeof(struct config));
 

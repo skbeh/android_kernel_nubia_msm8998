@@ -320,7 +320,7 @@ void kgsl_cffdump_printline(int id, uint opcode, uint op1, uint op2,
 }
 EXPORT_SYMBOL(kgsl_cffdump_printline);
 
-void kgsl_cffdump_init()
+void kgsl_cffdump_init(void)
 {
 	struct dentry *debugfs_dir = kgsl_get_debugfs_dir();
 
@@ -347,7 +347,7 @@ void kgsl_cffdump_init()
 	chan = create_channel(subbuf_size, n_subbufs);
 }
 
-void kgsl_cffdump_destroy()
+void kgsl_cffdump_destroy(void)
 {
 	if (chan)
 		relay_flush(chan);

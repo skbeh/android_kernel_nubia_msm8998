@@ -853,7 +853,7 @@ static int lov_lock_use(const struct lu_env *env,
 }
 
 #if 0
-static int lock_lock_multi_match()
+static int lock_lock_multi_match(void)
 {
 	struct cl_lock	  *lock    = slice->cls_lock;
 	struct cl_lock_descr    *subneed = &lov_env_info(env)->lti_ldescr;

@@ -250,7 +250,7 @@ static irqreturn_t timer_irq_handler(int irq, void *dev_id)
 /*
  * Setup the local event timer for @cpu
  */
-void arc_local_timer_setup()
+void arc_local_timer_setup(void)
 {
 	struct clock_event_device *evt = this_cpu_ptr(&arc_clockevent_device);
 	int cpu = smp_processor_id();

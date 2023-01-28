@@ -39,7 +39,7 @@ static void set_eflags(unsigned long eflags)
 		      : : "rm" (eflags) : "flags");
 }
 
-int main()
+int main(void)
 {
 	printf("[RUN]\tSet NT and issue a syscall\n");
 	set_eflags(get_eflags() | X86_EFLAGS_NT);

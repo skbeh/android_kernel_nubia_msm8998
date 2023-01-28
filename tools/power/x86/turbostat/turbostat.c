@@ -645,13 +645,13 @@ done:
 	return 0;
 }
 
-void flush_stdout()
+void flush_stdout(void)
 {
 	fputs(output_buffer, stdout);
 	fflush(stdout);
 	outp = output_buffer;
 }
-void flush_stderr()
+void flush_stderr(void)
 {
 	fputs(output_buffer, stderr);
 	outp = output_buffer;
@@ -1160,7 +1160,7 @@ int phi_pkg_cstate_limits[16] = {PCL__0, PCL__2, PCL_6N, PCL_6R, PCLRSV, PCLRSV,
 
 
 static void
-calculate_tsc_tweak()
+calculate_tsc_tweak(void)
 {
 	tsc_tweak = base_hz / tsc_hz;
 }
@@ -1694,7 +1694,7 @@ int mark_cpu_present(int cpu)
 	return 0;
 }
 
-void turbostat_loop()
+void turbostat_loop(void)
 {
 	int retval;
 	int restarted = 0;
@@ -1751,7 +1751,7 @@ restart:
 	}
 }
 
-void check_dev_msr()
+void check_dev_msr(void)
 {
 	struct stat sb;
 	char pathname[32];
@@ -1762,7 +1762,7 @@ void check_dev_msr()
 			err(-5, "no /dev/cpu/0/msr, Try \"# modprobe msr\" ");
 }
 
-void check_permissions()
+void check_permissions(void)
 {
 	struct __user_cap_header_struct cap_header_data;
 	cap_user_header_t cap_header = &cap_header_data;
@@ -2671,7 +2671,7 @@ guess:
 
 	return 0;
 }
-void process_cpuid()
+void process_cpuid(void)
 {
 	unsigned int eax, ebx, ecx, edx, max_level;
 	unsigned int fms, family, model, stepping;
@@ -2800,7 +2800,7 @@ void process_cpuid()
 	return;
 }
 
-void help()
+void help(void)
 {
 	fprintf(stderr,
 	"Usage: turbostat [OPTIONS][(--interval seconds) | COMMAND ...]\n"
@@ -2839,7 +2839,7 @@ int open_dev_cpu_msr(int dummy1)
 	return 0;
 }
 
-void topology_probe()
+void topology_probe(void)
 {
 	int i;
 	int max_core_id = 0;
@@ -3012,7 +3012,7 @@ int initialize_counters(int cpu_id)
 	return 0;
 }
 
-void allocate_output_buffer()
+void allocate_output_buffer(void)
 {
 	output_buffer = calloc(1, (1 + topo.num_cpus) * 2048);
 	outp = output_buffer;
@@ -3039,7 +3039,7 @@ void set_base_cpu(void)
 		fprintf(stderr, "base_cpu = %d\n", base_cpu);
 }
 
-void turbostat_init()
+void turbostat_init(void)
 {
 	setup_all_buffers();
 	set_base_cpu();
