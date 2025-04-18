@@ -92,8 +92,12 @@
 	status = "disabled";
 };
 
+/*
 &firmware{
 	android{
-		/delete-node/ fstab;
+		fstab{
+			/delete-node/ vendor;
+		};
 	};
 };
+*/
